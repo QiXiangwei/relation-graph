@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import "github.com/kataras/iris"
 
 func main()  {
-	fmt.Println("hello")
+	var (
+		app *iris.Application
+	)
+	app = iris.Default()
+
 }
