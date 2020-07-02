@@ -17,7 +17,7 @@ require (
 	github.com/iris-contrib/go.uuid v2.0.0+incompatible // indirect
 	github.com/json-iterator/go v1.1.10 // indirect
 	github.com/kataras/golog v0.0.18 // indirect
-	github.com/kataras/iris v11.1.1+incompatible // indirect
+	github.com/kataras/iris v11.1.1+incompatible
 	github.com/klauspost/compress v1.10.10 // indirect
 	github.com/microcosm-cc/bluemonday v1.0.3 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect

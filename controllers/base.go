@@ -20,6 +20,7 @@ func RegisterController(path string, constructor ControllerConstructor) {
 	var (
 		handle MvcHandle
 	)
+
 	handle = func(app *mvc.Application) {
 		beforeMiddleWareHandlers, controller := constructor()
 		app.Router.Use(beforeMiddleWareHandlers...)
