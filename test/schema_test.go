@@ -18,9 +18,9 @@ func Test_Create(t *testing.T) {
 
 	op = &api.Operation{}
 	op.Schema = `
-		name string .
-		user_id int @index(int) @upsert .
-		sku_id int @index(int) @upsert .
+		name: string @index(fulltext, term) .
+		user_id: int @index(int) @upsert .
+		sku_id: int @index(int) @upsert .
 	`
 	dg = client.GetDgoClient()
 	if err = dg.Alter(context.TODO(), op); err != nil {
