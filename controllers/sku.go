@@ -9,7 +9,7 @@ type SkuController struct {
 	BaseController
 }
 
-func (c *SkuController) GetSomeBoughtSku() library.RelationResponse {
+func (c *SkuController) GetLikeBought() library.RelationResponse {
 	return library.BuildRelationResponse(0, "success", nil)
 }
 
