@@ -6,11 +6,11 @@ require (
 	github.com/Joker/jade v1.0.0 // indirect
 	github.com/Shopify/goreferrer v0.0.0-20181106222321-ec9c9a553398 // indirect
 	github.com/aymerick/raymond v2.0.2+incompatible // indirect
-	github.com/dgraph-io/dgo/v2 v2.2.0 // indirect
+	github.com/dgraph-io/dgo/v2 v2.2.0
 	github.com/eknkc/amber v0.0.0-20171010120322-cdade1c07385 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/flosch/pongo2 v0.0.0-20200529170236-5abacdfa4915 // indirect
-	github.com/go-redis/redis v6.15.8+incompatible // indirect
+	github.com/go-redis/redis v6.15.8+incompatible
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/gorilla/schema v1.1.0 // indirect
 	github.com/iris-contrib/blackfriday v2.0.0+incompatible // indirect
@@ -30,7 +30,7 @@ require (
 	golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae // indirect
 	golang.org/x/text v0.3.3 // indirect
 	google.golang.org/genproto v0.0.0-20200701001935-0939c5918c31 // indirect
-	google.golang.org/grpc v1.30.0 // indirect
+	google.golang.org/grpc v1.30.0
 	google.golang.org/protobuf v1.25.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
