@@ -48,7 +48,7 @@ func (r *SkuRepository) QueryBoughtSku(userId int) []models.Sku {
 	}
 
 	return root.Sku
-	
+
 }
 
 func QueryLikeSku(skuId int) {
