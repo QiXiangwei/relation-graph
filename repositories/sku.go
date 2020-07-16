@@ -1,21 +1,21 @@
 package repositories
 
 import (
+
 	"context"
 	"encoding/json"
 	"fmt"
 	"github.com/dgraph-io/dgo/v2"
 	"github.com/dgraph-io/dgo/v2/protos/api"
-	"relation-graph/client"
+	relationClient "relation-graph/client"
 	"relation-graph/models"
 )
 
-type SkuRepository interface {
-	QueryBoughtSku(userId int)
-	QueryLikeSku(skuId int)
+type SkuRepository struct {
+
 }
 
-func QueryBoughtSku(userId int) []models.Sku {
+func (r *SkuRepository) QueryBoughtSku(userId int) []models.Sku {
 	var (
 		q       string
 		dg      *dgo.Dgraph
@@ -23,6 +23,8 @@ func QueryBoughtSku(userId int) []models.Sku {
 		res     *api.Response
 		err     error
 		)
+
+
 	q = `query List($userId:string) {
 		bought (func: eq(user_id, $userId)) {
 			sku_id
@@ -32,7 +34,7 @@ func QueryBoughtSku(userId int) []models.Sku {
 
 	v = make(map[string]string)
 	v["$userId"] = string(userId)
-	dg = client.GetDgoClient()
+	dg = relationClient.GetDgoClient()
 	if res, err = dg.NewTxn().QueryWithVars(context.TODO(), q, v); err != nil {
 		fmt.Println(err.Error())
 	}
@@ -46,6 +48,7 @@ func QueryBoughtSku(userId int) []models.Sku {
 	}
 
 	return root.Sku
+	
 }
 
 func QueryLikeSku(skuId int) {

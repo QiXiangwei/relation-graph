@@ -9,7 +9,7 @@ type MvcHandle func(*mvc.Application)
 type ControllerConstructor func() ([]iris.Handler, interface{})
 
 type BaseController struct {
-	Ctx *iris.Context
+	Ctx iris.Context
 }
 
 var (
@@ -17,11 +17,7 @@ var (
 )
 
 func RegisterController(path string, constructor ControllerConstructor) {
-	var (
-		handle MvcHandle
-	)
-
-	handle = func(app *mvc.Application) {
+	handle := func(app *mvc.Application) {
 		beforeMiddleWareHandlers, controller := constructor()
 		app.Router.Use(beforeMiddleWareHandlers...)
 		app.Handle(controller)
